@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="post-employee.component.css" />
+    
+  </head>
+  <body>
+      <div class="container">
+        
+        <div class="frames">
+          <div class="frame1"></div>
+          <div class="frame2"></div>
+          <form [formGroup]="postEmployeeForm" (ngSubmit)="postEmployee()">
+            <div class="addFrame form-group">
+              <label for="name" class="labelfield">Name</label>
+              <input type="text" id="name" name="name" class="textfield form-control" formControlName="name">
+              <div *ngIf="postEmployeeForm.controls['name'].invalid && postEmployeeForm.controls['name'].touched" class="error-message">Name is required</div>
+            </div>
+            <div class="addFrame form-group">
+              <label for="contact" class="labelfield">Contact</label>
+              <input type="text" id="contact" name="contact" class="textfield form-control" formControlName="contact">
+              <div *ngIf="postEmployeeForm.controls['contact'].invalid && postEmployeeForm.controls['contact'].touched" class="error-message">Contact is required</div>
+            </div>
+            <div class="addFrame form-group">
+              <label for="jobPosition" class="labelfield">Job Position</label>
+              <input type="text" id="jobPosition" name="jobPosition" class="textfield form-control" formControlName="jobPosition">
+              <div *ngIf="postEmployeeForm.controls['jobPosition'].invalid && postEmployeeForm.controls['jobPosition'].touched" class="error-message">Job Position is required</div>
+            </div>
+            <div class="addFrame form-group">
+              <label for="jobType" class="labelfield">Job Type</label>
+              <input type="text" id="jobType" name="jobType" class="textfield form-control" formControlName="jobType">
+              <div *ngIf="postEmployeeForm.controls['jobType'].invalid && postEmployeeForm.controls['jobType'].touched" class="error-message">Job Type is required</div>
+            </div>
+            <div class="addFrame form-group">
+              <label for="department" class="labelfield">Department</label>
+              <select id="department" name="department" class="textfield form-control" formControlName="department">
+                <option value="">--Select--</option>
+                <option *ngFor="let item of datalist" [value]="item.name">{{item.name}}</option>    
+              </select>
+              <div *ngIf="postEmployeeForm.controls['department'].invalid && postEmployeeForm.controls['department'].touched" class="error-message">Department is required</div>
+            </div>
+            <div class="addFrame form-group">
+              <label for="location" class="labelfield">Location</label>
+              <input type="text" id="location" name="location" class="textfield form-control" formControlName="location">
+              <div *ngIf="postEmployeeForm.controls['location'].invalid && postEmployeeForm.controls['location'].touched" class="error-message">Location is required</div>
+            </div>
+            <button type="submit" class="submitBtn">Add</button>
+          </form>
+        </div>
+      </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

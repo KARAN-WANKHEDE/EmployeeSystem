@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="update-employee.component.css" />
+    
+  </head>
+  <body>
+      <div class="container">
+        <div class="frames">
+          <div class="frame1"></div>
+          <div class="frame2"></div>
+          <form [formGroup]="updateEmployeeForm" (ngSubmit)="updateEmployee()">
+            <div class="addFrame form-group">
+              <label for="name" class="labelfield">Name</label>
+              <input type="text" id="name" name="name" class="textfield form-control" formControlName="name">
+              <div *ngIf="updateEmployeeForm.controls['name'].invalid && updateEmployeeForm.controls['name'].touched" class="error-message">Name is required</div>
+            </div>
+            <div class="addFrame form-group">
+              <label for="contact" class="labelfield">Contact</label>
+              <input type="text" id="contact" name="contact" class="textfield form-control" formControlName="contact">
+              <div *ngIf="updateEmployeeForm.controls['contact'].invalid && updateEmployeeForm.controls['contact'].touched" class="error-message">Contact is required</div>
+            </div>
+            <div class="addFrame form-group">
+              <label for="jobPosition" class="labelfield">Job Position</label>
+              <input type="text" id="jobPosition" name="jobPosition" class="textfield form-control" formControlName="jobPosition">
+              <div *ngIf="updateEmployeeForm.controls['jobPosition'].invalid && updateEmployeeForm.controls['jobPosition'].touched" class="error-message">Job Position is required</div>
+            </div>
+            <div class="addFrame form-group">
+              <label for="jobType" class="labelfield">Job Type</label>
+              <input type="text" id="jobType" name="jobType" class="textfield form-control" formControlName="jobType">
+              <div *ngIf="updateEmployeeForm.controls['jobType'].invalid && updateEmployeeForm.controls['jobType'].touched" class="error-message">Job Type is required</div>
+            </div>
+            <div class="addFrame form-group">
+              <label for="department" class="labelfield">Department</label>
+              <select id="department" name="department" class="textfield form-control" formControlName="department">
+                <option value="">--Select--</option>
+                <option *ngFor="let item of datalist" [value]="item.name">{{item.name}}</option>    
+              </select>
+              <div *ngIf="updateEmployeeForm.controls['department'].invalid && updateEmployeeForm.controls['department'].touched" class="error-message">Department is required</div>
+            </div>
+            <div class="addFrame form-group">
+              <label for="location" class="labelfield">Location</label>
+              <input type="text" id="location" name="location" class="textfield form-control" formControlName="location">
+              <div *ngIf="updateEmployeeForm.controls['location'].invalid && updateEmployeeForm.controls['location'].touched" class="error-message">Location is required</div>
+            </div>
+            <button type="submit" class="submitBtn btn btn-light">Update</button>
+          </form>
+        </div>
+        </div>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+
+*{
+    --color-white: #fff;
+    --color-black: #000;
+    --color-paleturquoise-100: #a0dfc9;
+    --color-lightcyan: rgba(218, 242, 234, 0.69);
+    --color-darkseagreen: #6ead96;
+    --neutral-silver: #f5f7fa;
+    --brand-primary: #4caf4f;
+    --text-gray-900: #18191f;
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --font-istok-web: "Istok Web";
+    --label-medium-label: Inter;
+  
+    /* font sizes */
+    --font-size-xl: 20px;
+    --body-medium-body-2-size: 16px;
+    --label-medium-label-size: 14px;
+
+     /* Gaps */
+ --gap-xl: 20px;
+ --gap-30xl: 49px;
+
+ /* Paddings */
+ --padding-xl: 20px;
+ --padding-9xs: 4px;
+ --padding-3xs: 10px;
+ --padding-xs: 12px;
+ --padding-9xl: 28px;
+ --padding-3xl: 22px;
+
+ /* Border radiuses */
+ --br-6xl: 25px;
+ --br-381xl: 400px;
+ --br-31xl: 50px;
+}
+.logo{
+    height: 85px;
+    width: 108px;
+    margin: 0 !important;
+    /* bottom: 0px; */
+    /* left: -166px; */
+    object-fit: cover;
+    z-index: 1;
+    position: relative;
+    top: 5px;
+}
+
+nav{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 0px;
+    padding-left: 10%;
+    padding-right: 10%;
+    flex: 1;
+    border-radius: 0 0 var(--br-31xl) var(--br-31xl);
+    background-color:var(--color-paleturquoise-100);
+    overflow: hidden;
+    gap: var(--gap-30xl);
+    max-width: 100%;
+    text-align: left;
+    font-size: var(--body-medium-body-2-size);
+    color: var(--text-gray-900);
+    font-family: var(--label-medium-label);
+    
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 45px;
+}
+
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    color:#4caf4f;
+    transition: .3s;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    background:#f5f7fa;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-family: var(--label-medium-label);
+    color: #0d0d0d;
+    font-weight: bold;
+    left: 233px;
+    position: relative;
+}
+
+a{
+    position: relative;
+    color: #f1f1f1;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a:hover{
+    letter-spacing: 0.25em;
+}
